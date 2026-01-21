@@ -49,7 +49,7 @@ const Hero = () => {
             className="w-24 h-17 object-cover rounded-[34px] shadow-2xl"
           />
         </motion.span>{' '}
-        <span className="text-blue-600 font-libre-baskerville italic">Design</span> <br className="hidden md:block" />
+        <span className="text-blue-700 font-libre-baskerville italic">Design</span> <br className="hidden md:block" />
         for{' '}
         <motion.span
           initial={{ x: 4, y: 4 }}
@@ -70,9 +70,9 @@ const Hero = () => {
             className="w-24 h-17 object-cover rounded-[34px] shadow-2xl"
           />
         </motion.span>{' '}
-        ambitious <span className='text-blue-600 font-libre-baskerville italic '>Brands</span> <br className="hidden md:block" />
+        ambitious <span className='text-blue-700 font-libre-baskerville italic '>Brands</span> <br className="hidden md:block" />
         <span>building digital </span>
-        <span className='text-blue-600 font-libre-baskerville italic '>Products.</span>
+        <span className='text-blue-700 font-libre-baskerville italic '>Products.</span>
 
       </h1>
 
