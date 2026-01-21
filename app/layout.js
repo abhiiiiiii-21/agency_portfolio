@@ -18,9 +18,9 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" className="h-full">
       <body
-        className={`${getUrbansit.variable} ${getLibreBaskerville.variable} antialiased`}>
+        className={`${getUrbansit.variable} ${getLibreBaskerville.variable} antialiased h-full`}>
         {children}
       </body>
     </html>
