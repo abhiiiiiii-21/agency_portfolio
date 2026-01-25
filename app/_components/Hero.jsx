@@ -9,7 +9,14 @@ import LogoCloud from '@/components/logo-cloud'
 
 
 const Hero = () => {
+  const containerRef = useRef(null)
 
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start end", "end start"]
+  })
+
+  const scale = useTransform(scrollYProgress, [0, 1], [1.3, 1])
 
   return (
     <section className="mt-28 flex flex-col items-center justify-center gap-12 overflow-x-hidden mb-5">
@@ -90,10 +97,14 @@ const Hero = () => {
 
       {/* Video Container that expands to full screen */}
 
-      <div >
+      <div className="relative w-[96vw] max-w-md sm:max-w-xl md:max-w-7xl lg:max-w-full mx-auto flex flex-col items-center">
 
-        <Image src="/Hero/main.jpg" alt='hero' width={1100} height={600} priority className="w-full h-full object-cover rounded-3xl mt-10 mb-5" />
-        <LogoCloud/>
+        <div className="w-full h-full overflow-hidden rounded-3xl mt-10 mb-5" ref={containerRef}>
+          <motion.div style={{ scale }} className="w-full h-full">
+            <Image src="/Hero/main.jpg" alt='hero' width={1400} height={800} priority className="w-full h-full object-cover" />
+          </motion.div>
+        </div>
+        <LogoCloud />
       </div>
     </section>
   )

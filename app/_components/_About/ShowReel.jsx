@@ -83,25 +83,39 @@ const ShowReel = () => {
 
   return (
     <section className=' w-full flex justify-center'>
-      <div className="relative w-full max-w-[1400px] h-[500px] flex items-center justify-center">
+      <div className="relative w-full max-w-[1400px] h-[400px] flex items-center justify-center">
 
         {/* Background Text */}
-        <div className="absolute inset-0 flex items-center justify-between px-72 pointer-events-none select-none z-0">
-          <motion.span
-            className="font-urbanist text-5xl md:text-9xl font-light text-neutral-400 tracking-tighter"
-            animate={{ x: isHovered ? -25 : 0 }}
-            transition={{ duration: 0.6, ease: [0.25, 1, 0.5, 1] }}
+        <div className="absolute inset-0 flex items-center justify-between px-108 pointer-events-none select-none z-0">
+          <motion.div
+            initial={{ x: 0 }}
+            whileInView={{ x: -50 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            viewport={{ once: true }}
           >
-            Play
-          </motion.span>
+            <motion.span
+              className="font-urbanist text-5xl md:text-7xl font-light text-neutral-400 tracking-tighter inline-block"
+              animate={{ x: isHovered ? -25 : 0 }}
+              transition={{ duration: 0.6, ease: [0.25, 1, 0.5, 1] }}
+            >
+              Play
+            </motion.span>
+          </motion.div>
 
-          <motion.span
-            className="font-urbanist text-5xl md:text-9xl font-light text-neutral-400 tracking-tighter"
-            animate={{ x: isHovered ? 25 : 0 }}
-            transition={{ duration: 0.6, ease: [0.25, 1, 0.5, 1] }}
+          <motion.div
+            initial={{ x: 0 }}
+            whileInView={{ x: 50 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            viewport={{ once: true }}
           >
-            Reel
-          </motion.span>
+            <motion.span
+              className="font-urbanist text-5xl md:text-7xl font-light text-neutral-400 tracking-tighter inline-block"
+              animate={{ x: isHovered ? 25 : 0 }}
+              transition={{ duration: 0.6, ease: [0.25, 1, 0.5, 1] }}
+            >
+              Reel
+            </motion.span>
+          </motion.div>
         </div>
 
         {/* Thumbnail Container */}
@@ -172,7 +186,7 @@ const ShowReel = () => {
               <motion.button
                 layout
                 transition={{ duration: 0.3, ease: "easeOut" }}
-                className="absolute bottom-[30px] right-[30px] z-20 bg-white text-black border-none rounded-[12px] px-[15px] py-[8px] text-[0.8rem] font-medium cursor-pointer flex items-center gap-2 hover:bg-[#f0f0f0] active:bg-[#e0e0e0] overflow-hidden whitespace-nowrap"
+                className="absolute bottom-[30px] right-[30px] z-20 bg-white text-black border-none rounded-[12px] px-[15px] py-[6px] text-[0.9rem] font-medium cursor-pointer flex items-center gap-2 hover:bg-[#f0f0f0] active:bg-[#e0e0e0] overflow-hidden whitespace-nowrap"
                 onClick={togglePlay}
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0, transition: { delay: 0.8, duration: 0.4 } }}
@@ -191,7 +205,7 @@ const ShowReel = () => {
                       <svg width="10" height="12" viewBox="0 0 12 14" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                         <path d="M1.5 13.5V0.5L11.5 7L1.5 13.5Z" />
                       </svg>
-                      <span className="font-urbanist font-semibold">Play</span>
+                      <span className="font-urbanist font-semibold ">Play</span>
                     </>
                   )}
                 </div>
