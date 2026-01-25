@@ -5,7 +5,6 @@ import { motion, useScroll, useTransform } from 'framer-motion'
 import { useRef, useEffect, useState } from 'react'
 import { Avatar, AvatarFallback, AvatarGroup, AvatarImage } from '@/components/ui/avatar'
 import { FlowButton } from '@/components/ui/flow-button'
-import ShowReel from './_Hero/ShowReel'
 import LogoCloud from '@/components/logo-cloud'
 
 
@@ -13,7 +12,7 @@ const Hero = () => {
 
 
   return (
-    <section className="mt-28 flex flex-col items-center justify-center gap-12 overflow-x-hidden mb-20">
+    <section className="mt-28 flex flex-col items-center justify-center gap-12 overflow-x-hidden mb-5">
       {/* Content Wrapper with Padding */}
       <div className='flex flex-col items-center justify-center px-4 gap-12 w-full'>
         <div className='flex items-center justify-center gap-2'>
@@ -91,11 +90,10 @@ const Hero = () => {
 
       {/* Video Container that expands to full screen */}
 
-      <div>
+      <div >
 
-      <ShowReel/>
-
-      <LogoCloud/>
+        <Image src="/Hero/main.jpg" alt='hero' width={1100} height={600} priority className="w-full h-full object-cover rounded-3xl mt-10 mb-5" />
+        <LogoCloud/>
       </div>
     </section>
   )

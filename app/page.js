@@ -50,7 +50,7 @@ export default function Home() {
         <AnimatePresence mode="wait">
           {isMenuOpen && <MenuPage />}
         </AnimatePresence>
-        <div id="main-content" className="relative w-full min-h-screen origin-center top-0 flex flex-col bg-[#DCDCDC]">
+        <div id="main-content" className="relative w-full min-h-screen origin-center top-0 flex flex-col bg-[#e9e9e9]">
           <main className="bg-[#F4F4F4] overflow-hidden min-h-screen flex flex-col rounded-b-4xl">
             <AvailabilityBadge />
             <Navbar />
