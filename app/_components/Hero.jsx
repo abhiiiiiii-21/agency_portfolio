@@ -19,7 +19,7 @@ const Hero = () => {
   const scale = useTransform(scrollYProgress, [0, 1], [1.3, 1])
 
   return (
-    <section className="mt-28 flex flex-col items-center justify-center gap-12 overflow-x-hidden mb-5">
+    <section className="hero-section mt-28 flex flex-col items-center justify-center gap-12 overflow-x-hidden mb-5">
       {/* Content Wrapper with Padding */}
       <div className='flex flex-col items-center justify-center px-4 gap-12 w-full'>
         <div className='flex items-center justify-center gap-2'>
@@ -41,7 +41,9 @@ const Hero = () => {
           <p className='font-urbanist text-neutral-500 text-[15px] leading-[1.1] tracking-tight font-medium'>Trusted by Founders.</p>
         </div>
 
-        <h1 className='font-urbanist text-black text-6xl max-w-5xl font-semibold text-center leading-[1.1] tracking-tight'>
+        <h1
+          className='font-urbanist text-black text-6xl max-w-5xl font-semibold text-center leading-[1.1] tracking-tight relative z-10'
+        >
           Effortless{' '}
           <motion.span
             initial={{ x: 4, y: 4 }}
@@ -58,6 +60,7 @@ const Hero = () => {
               alt="Design"
               width={100}
               height={50}
+              priority={true}
               className="w-24 h-17 object-cover rounded-[34px] shadow-2xl"
             />
           </motion.span>{' '}
@@ -79,6 +82,7 @@ const Hero = () => {
               alt="Ambitious"
               width={100}
               height={50}
+              priority={true}
               className="w-24 h-17 object-cover rounded-[34px] shadow-2xl"
             />
           </motion.span>{' '}

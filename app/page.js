@@ -36,22 +36,27 @@ export default function Home() {
   }, [isLoading, isMenuOpen]);
 
   React.useEffect(() => {
-    if (isMenuOpen) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = 'unset';
-    }
+    document.body.style.overflow = isMenuOpen ? "hidden" : "unset";
   }, [isMenuOpen]);
 
   return (
     <>
       <Loader />
-      <div id="main-content-wrapper" className="relative w-full min-h-screen bg-black top-0">
+
+      {/* 🎬 TRANSITION SHELL */}
+      <div
+        id="main-content-wrapper"
+        className="relative w-full min-h-screen bg-black"
+      >
         <AnimatePresence mode="wait">
           {isMenuOpen && <MenuPage />}
         </AnimatePresence>
-        <div id="main-content" className="relative w-full min-h-screen origin-center top-0 flex flex-col bg-[#ededed]">
-          <main className="bg-[#F4F4F4] overflow-hidden min-h-screen flex flex-col rounded-b-4xl">
+
+        <div
+          id="main-content"
+          className="relative w-full min-h-screen flex flex-col bg-[#ededed]"
+        >
+          <main className="bg-[#F4F4F4] overflow-x-hidden min-h-screen flex flex-col rounded-b-4xl">
             <AvailabilityBadge />
             <Navbar />
             <Hero />
@@ -60,9 +65,7 @@ export default function Home() {
           <main className="min-h-screen flex flex-col">
             <About />
             <RecentWorks />
-            <div className="h-[200vh]">
-              
-            </div>
+            <div className="h-[200vh]" />
           </main>
         </div>
       </div>
