@@ -7,7 +7,7 @@ import { ScrollVelocityContainer, ScrollVelocityRow } from '@/components/ui/scro
 
 const RecentWorks = () => {
     return (
-        <section className='flex items-center justify-center mt-40 flex-col '>
+        <section className='flex items-center justify-center mt-30 flex-col '>
 
             {/* <div
                 className='flex flex-col items-center justify-center relative z-0 gap-4'>

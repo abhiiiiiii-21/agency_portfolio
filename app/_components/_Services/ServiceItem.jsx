@@ -23,7 +23,7 @@ const ServiceItem = () => {
       id: "01",
       title: "Website Development",
       src: "/services/img1.jpg",
-      description: "We build fast, scalable websites and applications that convert.",
+      description: "We build fast, scalable websites and applications that convert visitors into customers.",
       tags: ["MVP Development", "Landing Page", "Full Stack", "CMS / Admin Dashboards"]
     },
     {
