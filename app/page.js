@@ -13,6 +13,7 @@ import RecentWorks from "./_components/RecentWorks";
 import Services from "./_components/Services";
 import Pricing from "./_components/Pricing";
 import FAQs from "./_components/FAQs";
+import Footer from "./_components/Footer";
 
 export default function Home() {
   const { isLoading, isMenuOpen } = useStore();
@@ -65,11 +66,14 @@ export default function Home() {
           </main>
 
           <main className="min-h-screen flex flex-col">
-            <About />
-            <RecentWorks />
-            <Services />
-            <Pricing />
-            {/* <FAQs /> */}
+            <section className="relative z-10 bg-[#0B0B0B]">
+              <About />
+              <RecentWorks />
+              <Services />
+              <Pricing />
+              <FAQs />
+            </section>
+            <Footer />
           </main>
         </div>
       </div>

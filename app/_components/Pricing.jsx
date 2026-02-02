@@ -4,7 +4,7 @@ import PricingTable from './_Pricing/PricingTable'
 
 const Pricing = () => {
   return (
-    <section className='flex items-center justify-center mt-20 flex-col mb-96 relative'>
+    <section className='flex items-center justify-center mt-20 flex-col relative'>
 
       <div className='flex flex-col justify-center relative z-0 gap-4'>
         <motion.h1

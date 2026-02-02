@@ -34,14 +34,14 @@ const FAQs = () => {
   const [col2Open, setCol2Open] = React.useState(null);
 
   return (
-    <section className='flex items-center justify-center mt-20 flex-col mb-60 px-4'>
+    <section className='flex items-center justify-center flex-col mb-25 px-4 mt-40'>
       <div className='flex flex-col justify-center relative z-0 gap-4 mb-16'>
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, ease: "easeOut" }}
-          className='font-light font-urbanist text-blue-700 text-3xl'>
+          className='font-light font-urbanist text-[#3a86ff] text-3xl'>
           ( <span className='font-dancing-script text-3xl'>FAQs</span> )
         </motion.p>
 
@@ -51,7 +51,7 @@ const FAQs = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
           className="text-6xl font-semibold tracking-tight leading-none font-urbanist text-center">
-          <span className="text-[#262626]">
+          <span className="text-white">
             Your Questions Answered
           </span>
         </motion.h1>
