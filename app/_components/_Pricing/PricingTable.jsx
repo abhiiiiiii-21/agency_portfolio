@@ -1,3 +1,4 @@
+'use client'
 import React from 'react'
 import { Check, Users, Zap, Shield, CircleCheck, TrendingUp, Globe } from 'lucide-react'
 import { Button } from '@/components/ui/button'

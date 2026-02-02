@@ -319,7 +319,7 @@ const StickyCard_001 = ({
                   }}
                   className="relative z-10 flex flex-col gap-6"
                 >
-                  <div className="overflow-hidden">
+                  <div className="overflow-hidden pb-4">
                     <motion.h2
                       variants={{
                         hidden: { y: 50, filter: 'blur(10px)', opacity: 0 },

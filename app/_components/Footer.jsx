@@ -33,7 +33,7 @@ const Footer = () => {
                             className='flex flex-col items-center gap-4'>
 
                             <h1 className='text-6xl leading-[0.9] font-medium font-urbanist tracking-tight text-center'>
-                                Let's build <span className='font-dancing-script text-6xl'>better!</span>
+                                Let's build something <span className='font-dancing-script text-6xl tracking-normal leading-0'>better!</span>
                             </h1>
 
                             {/* Subheading */}
