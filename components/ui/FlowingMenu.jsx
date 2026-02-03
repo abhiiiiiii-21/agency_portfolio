@@ -33,7 +33,7 @@ function FlowingMenu({
   );
 }
 
-function MenuItem({ link, text, image, speed, textColor, marqueeBgColor, marqueeTextColor, borderColor, isFirst, isLast, onItemClick }) {
+function MenuItem({ link, text, image, speed, textColor, marqueeBgColor, marqueeTextColor, borderColor, isFirst, isLast, onItemClick, target }) {
   const itemRef = useRef(null);
   const marqueeRef = useRef(null);
   const marqueeInnerRef = useRef(null);
@@ -133,6 +133,8 @@ function MenuItem({ link, text, image, speed, textColor, marqueeBgColor, marquee
         onMouseLeave={handleMouseLeave}
         onClick={onItemClick}
         style={{ color: textColor }}
+        target={target}
+        rel={target === '_blank' ? 'noopener noreferrer' : undefined}
       >
         {text}
       </a>

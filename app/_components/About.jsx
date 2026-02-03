@@ -12,7 +12,7 @@ const About = () => {
   const textRef = useRef(null)
 
   useGSAP(() => {
-    const split = new SplitType(textRef.current, { types: 'chars' })
+    const split = new SplitType(textRef.current, { types: 'words, chars' })
 
     gsap.set(split.chars, { color: 'rgba(255, 255, 255, 0.2)', opacity: 1 })
 

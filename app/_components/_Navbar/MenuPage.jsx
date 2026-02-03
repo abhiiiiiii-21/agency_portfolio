@@ -4,7 +4,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { useStore } from '../../_store/useStore';
 import FlowingMenu from '@/components/ui/FlowingMenu';
-import Link from 'next/link';
+
 import { Link000 } from '@/components/ui/skiper-ui/skiper40';
 
 
@@ -13,7 +13,7 @@ const demoItems = [
     { link: '#about', text: 'About', image: 'https://picsum.photos/600/400?random=2' },
     { link: '#work', text: 'Recent Work', image: 'https://picsum.photos/600/400?random=3' },
     { link: '#services', text: 'Services', image: 'https://picsum.photos/600/400?random=4' },
-    { link: '', text: 'Contact', image: 'https://picsum.photos/600/400?random=5' }
+    { link: 'https://cal.com/abhishek-patel-ujjhlo/quick-chat', text: 'Contact', image: 'https://picsum.photos/600/400?random=5', target: '_blank' }
 ];
 
 

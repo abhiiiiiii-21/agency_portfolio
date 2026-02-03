@@ -185,7 +185,7 @@ const StickyCard_001 = ({
         style={{ scale }}
         onMouseEnter={() => i > 0 && onCursorEnter()}
         onMouseLeave={() => onCursorLeave()}
-        onClick={() => i > 0 && window.open('https://instagram.com', '_blank')}
+        onClick={() => i > 0 && window.open('https://cal.com/abhishek-patel-ujjhlo/quick-chat', '_blank')}
         className={`
           will-change-transform
           relative flex h-[90vh] w-[95vw] origin-top overflow-hidden
@@ -218,9 +218,9 @@ const StickyCard_001 = ({
                 loop
                 muted
                 playsInline
-                className="w-full h-full object-cover opacity-50 block"
+                className="w-full h-full object-cover opacity-80 block"
               />
-              <div className="absolute inset-0 bg-black/30" />
+              <div className="absolute inset-0 bg-black/10" />
             </div>
 
             {/* Section opener typography */}
@@ -283,7 +283,7 @@ const StickyCard_001 = ({
         ) : (
           <>
             {/* Background Video (Left Side) */}
-            {/* <div className="absolute top-0 left-0 w-1/2 h-full z-0 overflow-hidden">
+            <div className="absolute top-0 left-0 w-1/2 h-full z-0 overflow-hidden">
               <motion.video
                 style={{ scale: imageScale }}
                 src="/services/mesh.mp4"
@@ -294,7 +294,7 @@ const StickyCard_001 = ({
                 className="w-full h-full object-cover opacity-50 block"
               />
               <div className="absolute inset-0 bg-black/10" />
-            </div> */}
+            </div>
 
             {/* ================= LEFT: CONTENT (Redesigned) ================= */}
             <div className="relative z-10 w-1/2 h-full flex flex-col">
@@ -346,7 +346,7 @@ const StickyCard_001 = ({
                   <span className="text-[9px] font-mono uppercase tracking-[0.2em] text-white/40">
                     Overview
                   </span>
-                  <p className="text-base text-white/70 leading-relaxed font-light max-w-xs">
+                  <p className="text-base text-white leading-relaxed font-light max-w-xs">
                     {description}
                   </p>
                 </div>
