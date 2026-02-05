@@ -3,6 +3,7 @@ import React from 'react'
 import { Check, Users, Zap, Shield, CircleCheck, TrendingUp, Globe } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { motion } from 'framer-motion'
+import { GlowingEffect } from '@/components/ui/glowing-effect'
 
 const plans = [
     {
@@ -60,8 +61,8 @@ const plans = [
 
 const PricingTable = () => {
     return (
-        <div className='mt-10 px-4 w-full'>
-            <section className="grid gap-10 p-8 md:grid-cols-3 max-w-[1300px] mx-auto font-urbanist">
+        <div className='mt-6 sm:mt-8 md:mt-10 px-2 sm:px-4 w-full'>
+            <section className="grid gap-4 sm:gap-6 md:gap-8 lg:gap-10 p-4 sm:p-6 md:p-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 max-w-[1300px] mx-auto font-urbanist">
                 {plans.map((plan, index) => (
                     <motion.div
                         key={index}
@@ -70,8 +71,15 @@ const PricingTable = () => {
                         viewport={{ once: true, margin: "-100px" }}
                         transition={{ duration: 0.6, delay: index * 0.2, ease: "easeOut" }}
                         className="relative w-full rounded-2xl p-2 shadow-xl border border-white/10 bg-[#000000]">
+                        <GlowingEffect
+                            spread={40}
+                            glow={true}
+                            disabled={false}
+                            proximity={64}
+                            inactiveZone={0.01}
+                        />
                         {/* Card Header Section */}
-                        <div className="bg-[#0B0B0B] relative mb-4 rounded-xl border border-white/5 p-8 overflow-hidden">
+                        <div className="bg-[#0B0B0B] relative mb-3 sm:mb-4 rounded-xl border border-white/5 p-4 sm:p-6 md:p-8 overflow-hidden">
                             {/* Top glass gradient */}
                             <div
                                 aria-hidden="true"
@@ -79,22 +87,22 @@ const PricingTable = () => {
                             />
 
                             {/* Label & Icon */}
-                            <div className="mb-8 flex items-center justify-between relative z-10">
-                                <div className="text-gray-400 flex items-center gap-2 text-base font-medium">
-                                    <plan.icon className="w-5 h-5" />
+                            <div className="mb-4 sm:mb-6 md:mb-8 flex items-center justify-between relative z-10">
+                                <div className="text-gray-400 flex items-center gap-2 text-sm sm:text-base font-medium">
+                                    <plan.icon className="w-4 h-4 sm:w-5 sm:h-5" />
                                     <span>{plan.name}</span>
                                 </div>
                             </div>
 
                             {/* Pricing */}
-                            <div className="mb-8 flex items-baseline gap-2 relative z-10">
-                                <span className="text-5xl font-bold tracking-tight text-white">$</span>
-                                <span className="text-5xl font-extrabold tracking-tight text-white">{plan.price}</span>
+                            <div className="mb-4 sm:mb-6 md:mb-8 flex items-baseline gap-1 sm:gap-2 relative z-10">
+                                <span className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-white">$</span>
+                                <span className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-white">{plan.price}</span>
                             </div>
 
                             {/* Action Button */}
-                            <Button className="cursor-pointer w-full relative z-10 rounded-lg h-11 px-4 py-2 font-semibold text-white text-lg bg-gradient-to-b from-[#3a86ff] to-[#3a86ff] shadow-[0_10px_25px_rgba(59,134,255,0.3)] group overflow-hidden">
-                                <div className="relative overflow-hidden h-7 flex flex-col items-center justify-start">
+                            <Button className="cursor-pointer w-full relative z-10 rounded-lg h-10 sm:h-11 px-3 sm:px-4 py-2 font-semibold text-white text-base sm:text-lg bg-gradient-to-b from-[#3a86ff] to-[#3a86ff] shadow-[0_10px_25px_rgba(59,134,255,0.3)] group overflow-hidden">
+                                <div className="relative overflow-hidden h-6 sm:h-7 flex flex-col items-center justify-start">
                                     <span className="group-hover:-translate-y-full transition-transform duration-500 ease-[cubic-bezier(0.19,1,0.22,1)] h-full flex items-center">
                                         Book a Call
                                     </span>
@@ -106,16 +114,16 @@ const PricingTable = () => {
                         </div>
 
                         {/* Features List */}
-                        <div className="space-y-6 px-6 pb-6 pt-2">
+                        <div className="space-y-4 sm:space-y-5 md:space-y-6 px-4 sm:px-5 md:px-6 pb-4 sm:pb-5 md:pb-6 pt-2">
                             <div className='flex items-center gap-2'>
                                 <span className="bg-muted-foreground/40 h-px flex-1" />
-                                <span className="text-muted-foreground shrink-0">{plan.description}</span>
+                                <span className="text-muted-foreground shrink-0 text-xs sm:text-sm">{plan.description}</span>
                                 <span className="bg-muted-foreground/40 h-px flex-1" />
                             </div>
-                            <ul className="space-y-4 font-medium text-sm text-gray-300">
+                            <ul className="space-y-3 sm:space-y-4 font-medium text-xs sm:text-sm text-gray-300">
                                 {plan.features.map((feature, i) => (
-                                    <li key={i} className="flex items-center gap-3">
-                                        <CircleCheck className="w-5 h-5 text-white shrink-0" />
+                                    <li key={i} className="flex items-center gap-2 sm:gap-3">
+                                        <CircleCheck className="w-4 h-4 sm:w-5 sm:h-5 text-white shrink-0" />
                                         <span>{feature}</span>
                                     </li>
                                 ))}
